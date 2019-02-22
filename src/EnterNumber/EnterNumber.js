@@ -9,41 +9,41 @@ class EnterNumber extends Component {
         }
     }
 
+    handleUp = (event) => {
+        event.preventDefault();
+        console.log('Up button')
+    }
+
+    handleDown = (event) => {
+        event.preventDefault();
+        console.log('Down button')
+        
+    }
+
     handleChange = (event) => {
         event.preventDefault();
         this.setState({
             newNumber: {
-            ...this.state.newNumber,
-            this.number: event.target.value,
-          },
-        });
-      }
+                number: event.target.value,
+            }
+        })
+        console.log(this.state.newNumber.number);
+    }
 
-      handleSubmit = (event) => {
-          event.preventDefault();
-          this.props.addNumber(this.state.newNumber);
-          this.setState({
-            newNumber: {
-                  number: ,
-              }
-          })
-      }
-
-
-  render() {
-    return (
-        <>
-            <div className="component">
-                    <button type="submit" onClick={this.handleSubmit} >Up</button>
+    render() {
+        return (
+            <>
+                <div className="component">
+                    <button type="submit" onClick={this.handleUp} >Up</button>
                         <input 
                             type="number" 
                             placeholder="Enter Number"
                             onChange= {this.handleChange} />
-                    <button type="submit" onClick={this.handleSubmit} >Down</button>
-            </div>
-        </>
-    );
-  }
-}
+                    <button type="submit" onClick={this.handleDown} >Down</button>
+                </div>
+            </>
+        );
+    }
+    }
 
 export default EnterNumber;

@@ -8,6 +8,7 @@ import History from '../History/History';
 class App extends Component {
 
   state = {
+    number: 0,
     historyList: [],
   }
 
@@ -16,8 +17,7 @@ class App extends Component {
     this.setState({
       historyList: [...this.state.historyList, newNumber]
     });
-    ;
-  }
+  };
 
   render() {
     return (
