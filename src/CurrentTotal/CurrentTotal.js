@@ -4,7 +4,7 @@ class CurrentTotal extends Component {
   render() {
     return (
         <div>
-            
+            CurrentTotal
         </div>
     );
   }
